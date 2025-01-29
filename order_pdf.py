@@ -3,6 +3,8 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch
 import os
 import shutil
+import json
+
 # makes the main folder
 folder_location = os.path.dirname(__file__) + r"\PDF_INVOICE"
 if os.path.exists(folder_location):
@@ -37,11 +39,13 @@ def create_pdf(json_file):
     canvas.drawString(5.6 * inch, height - 2.6 * inch, "KvK-nummer: 27124701")
     canvas.drawImage(logo_location, 0.5 * inch, height - 2.3 * inch, 150, 150)
     canvas.line(0.5 * inch, height - 2.7 * inch, 7.5 * inch, height - 2.7 * inch)
+
+
     
     # klant gegevens
     bedrijfsnaam = ""
     address_klant = ""
-    poscode_klant = ""
+    postcode_klant = ""
     vestegings_plaats_klant = ""
     kvk_nummer = ""
     order_nummer = ""
