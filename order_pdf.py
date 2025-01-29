@@ -3,8 +3,6 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch
 import os
 import shutil
-import json
-
 # makes the main folder
 folder_location = os.path.dirname(__file__) + r"\PDF_INVOICE"
 if os.path.exists(folder_location):
@@ -39,20 +37,38 @@ def create_pdf(json_file):
     canvas.drawString(5.6 * inch, height - 2.6 * inch, "KvK-nummer: 27124701")
     canvas.drawImage(logo_location, 0.5 * inch, height - 2.3 * inch, 150, 150)
     canvas.line(0.5 * inch, height - 2.7 * inch, 7.5 * inch, height - 2.7 * inch)
-
-
     
     # klant gegevens
-    bedrijfsnaam = ""
-    address_klant = ""
-    postcode_klant = ""
-    vestegings_plaats_klant = ""
-    kvk_nummer = ""
-    order_nummer = ""
-    order_datum = ""
-    betaal_termijn = ""
+    bedrijfsnaam = "test"
+    address_klant = "test"
+    poscode_klant = "test"
+    vestegings_plaats_klant = "test"
+    kvk_nummer = "test"
+    factuur_nummer = "test"
+    order_datum = "test"
+    betaal_termijn = "test"
 
+    canvas.drawString(1 * inch, height - 3 * inch, bedrijfsnaam)
+    canvas.drawString(1 * inch, height - 3.2 * inch, address_klant)
+    canvas.drawString(1 * inch, height - 3.4 * inch, poscode_klant)
+    canvas.drawString(1 * inch, height - 3.6 * inch, vestegings_plaats_klant)
+    canvas.drawString(1 * inch, height - 4 * inch, kvk_nummer)
+    canvas.drawString(1 * inch, height - 4.4 * inch, factuur_nummer)
+    canvas.drawString(1 * inch, height - 4.6 * inch, order_datum)
+    canvas.drawString(1 * inch, height - 4.8 * inch, betaal_termijn)
+
+    # algemene product gegevens
+    canvas.line(0.5 * inch, height - 5 * inch, 7.5 * inch, height - 5 * inch)
+    canvas.drawString(1 * inch, height - 5.2 * inch, "aantal")
+    canvas.drawString(2 * inch, height - 5.2 * inch, "omschrijving")
+    canvas.drawString(5 * inch, height - 5.2 * inch, "prijs")
+    canvas.drawString(5.6 * inch, height - 5.2 * inch, "totaal excl. btw")
+    canvas.line(0.5 * inch, height - 5.3 * inch, 7.5 * inch, height - 5.3 * inch)
+
+    # product gegevens
     
 
     canvas.save()
 create_pdf("test")
+create_pdf("test2")
+create_pdf("test3")
