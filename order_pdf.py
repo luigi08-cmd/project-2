@@ -37,6 +37,10 @@ def create_pdf(json_file):
     canvas.drawString(5.6 * inch, height - 2.6 * inch, "KvK-nummer: 27124701")
     canvas.drawImage(logo_location, 0.5 * inch, height - 2.3 * inch, 150, 150)
     canvas.line(0.5 * inch, height - 2.7 * inch, 7.5 * inch, height - 2.7 * inch)
+
+
+    f = open('json.2000-096')
+    
     
     # klant gegevens
     bedrijfsnaam = "test"
