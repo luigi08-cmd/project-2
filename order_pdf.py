@@ -38,5 +38,13 @@ def create_pdf(json_file):
     canvas.drawImage(logo_location, 0.5 * inch, height - 2.3 * inch, 150, 150)
     canvas.line(0.5 * inch, height - 2.7 * inch, 7.5 * inch, height - 2.7 * inch)
     
+    # klant gegevens
+    bedrijfsnaam = ""
+    address_klant = ""
+    poscode_klant = ""
+    vestegings_plaats_klant = ""
+    kvk_nummer = ""
+
+
     canvas.save()
 create_pdf("test")
