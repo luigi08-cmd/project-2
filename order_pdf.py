@@ -2,22 +2,41 @@ from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch
 import os
-
+import shutil
 # makes the main folder
 folder_location = os.path.dirname(__file__) + r"\PDF_INVOICE"
-if not os.path.exists(folder_location):
-    os.makedirs(folder_location)
+if os.path.exists(folder_location):
+    shutil.rmtree(folder_location)
+os.makedirs(folder_location)
 
 # creates pdf
-def create_pdf(file_name):
+def create_pdf(json_file):
     # default sizes
     width, height = A4
 
     # create file location with correct pdf name
-    pdf_name = file_name + ".pdf"
+    pdf_name = json_file + ".pdf"
     file_location = os.path.join(folder_location , pdf_name) 
-
-    # ask the user for information
     canvas = Canvas(file_location)
-    canvas.drawString(72,792, )
+    logo_location = os.path.join(os.path.dirname(__file__), "logo.png")
+
+    # Factuur kop
+    canvas.setFont("Helvetica-Bold", 20)
+    canvas.drawString(1 * inch, height - 2.6 * inch, "Factuur")
+
+    # vaste gegevens (Bedrijf gegevens afzender)
+    canvas.setFont("Helvetica", 12)
+    canvas.drawString(5.6 * inch, height - 0.8 * inch, "SD Solutions BV")
+    canvas.drawString(5.6 * inch, height - 1.0 * inch, "Leerpark Promenade 100")
+    canvas.drawString(5.6 * inch, height - 1.2 * inch, "3312 KW Dordcrecht")
+    canvas.drawString(5.6 * inch, height - 1.6 * inch, "info@sd-solutions.nl")
+    canvas.drawString(5.6 * inch, height - 1.8 * inch, "sdsolutions.nl")
+    canvas.drawString(5.6 * inch, height - 2.0 * inch, "06 12345678")
+
+    canvas.drawString(5.6 * inch, height - 2.4 * inch, "BTW-nummer: NL123456789B01")
+    canvas.drawString(5.6 * inch, height - 2.6 * inch, "KvK-nummer: 27124701")
+    canvas.drawImage(logo_location, 0.5 * inch, height - 2.3 * inch, 150, 150)
+    canvas.line(0.5 * inch, height - 2.7 * inch, 7.5 * inch, height - 2.7 * inch)
+    
     canvas.save()
+create_pdf("test")
