@@ -44,7 +44,7 @@ def create_pdf(json_file):
     poscode_klant = "test"
     vestegings_plaats_klant = "test"
     kvk_nummer = "test"
-    order_nummer = "test"
+    factuur_nummer = "test"
     order_datum = "test"
     betaal_termijn = "test"
 
@@ -53,9 +53,20 @@ def create_pdf(json_file):
     canvas.drawString(1 * inch, height - 3.4 * inch, poscode_klant)
     canvas.drawString(1 * inch, height - 3.6 * inch, vestegings_plaats_klant)
     canvas.drawString(1 * inch, height - 4 * inch, kvk_nummer)
-    canvas.drawString(1 * inch, height - 4.4 * inch, order_nummer)
+    canvas.drawString(1 * inch, height - 4.4 * inch, factuur_nummer)
     canvas.drawString(1 * inch, height - 4.6 * inch, order_datum)
     canvas.drawString(1 * inch, height - 4.8 * inch, betaal_termijn)
+
+    # algemene product gegevens
+    canvas.line(0.5 * inch, height - 5 * inch, 7.5 * inch, height - 5 * inch)
+    canvas.drawString(1 * inch, height - 5.2 * inch, "aantal")
+    canvas.drawString(2 * inch, height - 5.2 * inch, "omschrijving")
+    canvas.drawString(5 * inch, height - 5.2 * inch, "prijs")
+    canvas.drawString(5.6 * inch, height - 5.2 * inch, "totaal excl. btw")
+    canvas.line(0.5 * inch, height - 5.3 * inch, 7.5 * inch, height - 5.3 * inch)
+
+    # product gegevens
+    
 
     canvas.save()
 create_pdf("test")
