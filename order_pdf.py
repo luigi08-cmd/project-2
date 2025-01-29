@@ -44,7 +44,11 @@ def create_pdf(json_file):
     poscode_klant = ""
     vestegings_plaats_klant = ""
     kvk_nummer = ""
+    order_nummer = ""
+    order_datum = ""
+    betaal_termijn = ""
 
+    
 
     canvas.save()
 create_pdf("test")
