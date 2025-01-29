@@ -70,3 +70,4 @@ def create_pdf(json_file):
 
     canvas.save()
 create_pdf("test")
+create_pdf("test")
