@@ -17,10 +17,7 @@ def create_pdf(json_file):
     with open('2000-096.json') as file:
         data =json.load(file)
 
-    order = data['order']
-
-    print(order)
-
+    order = data["order"]
     klant = order["klant"]
 
     totale_prijs_incl_btw = 0
@@ -59,9 +56,9 @@ def create_pdf(json_file):
     poscode_klant = klant["postcode"]
     vestegings_plaats_klant = klant["stad"]
     kvk_nummer = klant["KVK-nummer"]
-    factuur_nummer = "test"
-    order_datum = "test"
-    betaal_termijn = "test"
+    factuur_nummer = order["ordernummer"]
+    order_datum = order["orderdatum"]
+    betaal_termijn = order["betaaltermijn"]
 
     canvas.drawString(1 * inch, height - 3 * inch, bedrijfsnaam)
     canvas.drawString(1 * inch, height - 3.2 * inch, address_klant)
