@@ -2,44 +2,30 @@ from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch
 import os
-import shutil
 import json
 from order_json_factuur import *
-
-# makes the main folder
-pdf_folder_location = os.path.dirname(__file__) + r"\PDF_INVOICE"
-if os.path.exists(pdf_folder_location):
-    shutil.rmtree(pdf_folder_location)
-os.makedirs(pdf_folder_location)
-
-json_folder_location = os.path.dirname(__file__) + r"\JSON_INVOICE"
-if os.path.exists(json_folder_location):
-    shutil.rmtree(json_folder_location)
-os.makedirs(json_folder_location)
 
 def create_pdf(json_file):
 
     # create json
-    with open('2000-096.json') as file:
+    with open(json_file + '-factuur.json') as file:
         data =json.load(file)
 
-    order = data["order"]
+    order = data["factuur"]
     klant = order["klant"]
 
     totale_prijs_excl_btw = 0
 
     # create file location with correct json name
-    pdf_name = json_file + ".json"
-    file_location = os.path.join(json_folder_location , pdf_name)
     
     # klant gegevens
     bedrijfsnaam = klant["naam"]
-    address_klant = klant["adres"]
+    address_klant = klant["address"]
     poscode_klant = klant["postcode"]
-    vestegings_plaats_klant = klant["stad"]
-    factuur_nummer = order["ordernummer"]
-    order_datum = order["orderdatum"]
-    betaal_termijn = order["betaaltermijn"]
+    vestegings_plaats_klant = klant["plaats"]
+    factuur_nummer = order["factuur-nummer"]
+    order_datum = order["factuur-datum"]
+    betaal_termijn = order["uiterlijke-betaal-datum"]
         
 
 
@@ -92,25 +78,23 @@ def create_pdf(json_file):
     canvas.line(0.5 * inch, height - 4.8 * inch, 7.5 * inch, height - 4.8 * inch)
 
     # product gegevens 
-    # for index in range(0, len(order["producten"])):
-    #     product = order["producten"][index]
-    #     canvas.drawString(1 * inch, height - (5 + 0.2 * index) * inch, str())
-    #     canvas.drawString(2 * inch, height - (5 + 0.2 * index) * inch, )
+    for index in range(0, len(order["producten"])):
+        product = order["producten"][index]
+        canvas.drawString(1 * inch, height - (5 + 0.2 * index) * inch, str(product["aantal"]))
+        canvas.drawString(2 * inch, height - (5 + 0.2 * index) * inch, product["product-naam"])
         
-    #     canvas.drawString(4.7 * inch, height - (5 + 0.2 * index) * inch, f"€ {str()}")
-    #     canvas.drawString(5.6 * inch, height - (5 + 0.2 * index) * inch, f"€ {str()}")
-    #     totale_prijs_excl_btw += 
-    #     stop = index + 1
-    #     if stop == len(order["producten"]):
-    #         # totaal
-    #         canvas.line(0.5 * inch, height - (5.1 + 0.2 * index) * inch, 7.5 * inch, height - (5.1 + 0.2 * index) * inch)    
-    #         canvas.drawString(5 * inch, height - (5.3 + 0.2 * index)* inch, "totaal")
-    #         canvas.drawString(5.6 * inch, height - (5.3 + 0.2 * index) * inch, f"€ {str(totale_prijs_excl_btw)}")
+        canvas.drawString(4.7 * inch, height - (5 + 0.2 * index) * inch, f"€ {str(product["prijs-per-stuk"])}")
+        canvas.drawString(5.6 * inch, height - (5 + 0.2 * index) * inch, f"€ {str(product["totale-prijs-excl"])}")
+        totale_prijs_excl_btw += product["totale-prijs-excl"]
+        stop = index + 1
+        if stop == len(order["producten"]):
+            # totaal
+            canvas.line(0.5 * inch, height - (5.1 + 0.2 * index) * inch, 7.5 * inch, height - (5.1 + 0.2 * index) * inch)    
+            canvas.drawString(5 * inch, height - (5.3 + 0.2 * index)* inch, "totaal")
+            canvas.drawString(5.6 * inch, height - (5.3 + 0.2 * index) * inch, f"€ {str(totale_prijs_excl_btw)}")
 
 
 
 
     canvas.save()
-create_pdf("test")
-create_pdf("test2")
-create_pdf("test3")
+create_pdf("2000-096")

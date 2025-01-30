@@ -2,7 +2,7 @@ import json
 import datetime
 
 def create_factuur_json(json_file_name):
-    with open('2000-096.json') as file:
+    with open(json_file_name + '.json') as file:
         data =json.load(file)
 
     order = data["order"]
@@ -14,11 +14,10 @@ def create_factuur_json(json_file_name):
     vestegings_plaats_klant = klant["stad"]
     order_nummer = order["ordernummer"]
     order_datum = order["orderdatum"]
-    order_datum = datetime.datetime.strptime(order_datum, "%Y-%m-%d") 
+    order_datum = order_datum.split("-")
+    order_datum = datetime.date(int(order_datum[2]), int(order_datum[1]), int(order_datum[0])) 
     betaal_termijn = order["betaaltermijn"]
     betaal_termijn = float(betaal_termijn.replace("-dagen", ""))
-    print(betaal_termijn)
-    print(order_datum)
     betaal_datum = order_datum + datetime.timedelta(betaal_termijn)
     producten_list = []
     
@@ -31,6 +30,7 @@ def create_factuur_json(json_file_name):
         prijs_per_stuk_excl_btw = product["prijs_per_stuk_excl_btw"]
         product_prijs = prijs_per_stuk_excl_btw * aantal_producten
         totale_prijs = product_prijs * btw
+        totale_prijs = round(totale_prijs, 2)
         product_dict = {
             "product-naam": product_naam,
             "aantal": aantal_producten,
@@ -43,8 +43,8 @@ def create_factuur_json(json_file_name):
     json_structure = {
         "factuur": {
             "factuur-nummer": order_nummer,
-            "factuur-datum": order_datum,
-            "uiterlijke-betaal-datum": betaal_datum,
+            "factuur-datum":str( order_datum),
+            "uiterlijke-betaal-datum": str(betaal_datum),
             "klant": {
                 "naam": bedrijfsnaam,
                 "address": address_klant,
