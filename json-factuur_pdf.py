@@ -39,13 +39,7 @@ def create_pdf(json_file):
     factuur_nummer = order["ordernummer"]
     order_datum = order["orderdatum"]
     betaal_termijn = order["betaaltermijn"]
-    
-    for index in range(0, len(order["producten"])):
-        product["aantal"]
-        product["productnaam"]
-        btw = 1 + product["btw_percentage"] / 100
-        product_prijs = product["prijs_per_stuk_excl_btw"] * product["aantal"]
-        product["prijs_per_stuk_excl_btw"]
+        
 
 
     # create pdf
@@ -97,20 +91,20 @@ def create_pdf(json_file):
     canvas.line(0.5 * inch, height - 4.8 * inch, 7.5 * inch, height - 4.8 * inch)
 
     # product gegevens 
-    for index in range(0, len(order["producten"])):
-        product = order["producten"][index]
-        canvas.drawString(1 * inch, height - (5 + 0.2 * index) * inch, str())
-        canvas.drawString(2 * inch, height - (5 + 0.2 * index) * inch, )
+    # for index in range(0, len(order["producten"])):
+    #     product = order["producten"][index]
+    #     canvas.drawString(1 * inch, height - (5 + 0.2 * index) * inch, str())
+    #     canvas.drawString(2 * inch, height - (5 + 0.2 * index) * inch, )
         
-        canvas.drawString(4.7 * inch, height - (5 + 0.2 * index) * inch, f"€ {str()}")
-        canvas.drawString(5.6 * inch, height - (5 + 0.2 * index) * inch, f"€ {str(product_prijs)}")
-        totale_prijs_excl_btw += product_prijs
-        stop = index + 1
-        if stop == len(order["producten"]):
-            # totaal
-            canvas.line(0.5 * inch, height - (5.1 + 0.2 * index) * inch, 7.5 * inch, height - (5.1 + 0.2 * index) * inch)    
-            canvas.drawString(5 * inch, height - (5.3 + 0.2 * index)* inch, "totaal")
-            canvas.drawString(5.6 * inch, height - (5.3 + 0.2 * index) * inch, f"€ {str(totale_prijs_excl_btw)}")
+    #     canvas.drawString(4.7 * inch, height - (5 + 0.2 * index) * inch, f"€ {str()}")
+    #     canvas.drawString(5.6 * inch, height - (5 + 0.2 * index) * inch, f"€ {str()}")
+    #     totale_prijs_excl_btw += 
+    #     stop = index + 1
+    #     if stop == len(order["producten"]):
+    #         # totaal
+    #         canvas.line(0.5 * inch, height - (5.1 + 0.2 * index) * inch, 7.5 * inch, height - (5.1 + 0.2 * index) * inch)    
+    #         canvas.drawString(5 * inch, height - (5.3 + 0.2 * index)* inch, "totaal")
+    #         canvas.drawString(5.6 * inch, height - (5.3 + 0.2 * index) * inch, f"€ {str(totale_prijs_excl_btw)}")
 
 
 
