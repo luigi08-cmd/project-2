@@ -21,7 +21,7 @@ def create_pdf(json_file):
 
     print(order)
 
-
+    klant = order["klant"]
 
 
 
@@ -55,11 +55,11 @@ def create_pdf(json_file):
     
     
     # klant gegevens
-    bedrijfsnaam = "test"
-    address_klant = "test"
-    poscode_klant = "test"
-    vestegings_plaats_klant = "test"
-    kvk_nummer = "test"
+    bedrijfsnaam = klant["naam"]
+    address_klant = klant["adres"]
+    poscode_klant = klant["postcode"]
+    vestegings_plaats_klant = klant["stad"]
+    kvk_nummer = klant["KVK-nummer"]
     factuur_nummer = "test"
     order_datum = "test"
     betaal_termijn = "test"
@@ -82,10 +82,11 @@ def create_pdf(json_file):
     canvas.line(0.5 * inch, height - 5.3 * inch, 7.5 * inch, height - 5.3 * inch)
 
     # product gegevens 
-    canvas.drawString(1 * inch, height - 5.6 * inch, "test")
-    canvas.drawString(2 * inch, height - 5.6 * inch, "test")
-    canvas.drawString(5 * inch, height - 5.6 * inch, "test")
-    canvas.drawString(5.6 * inch, height - 5.6 * inch, "test")
+    for i in len(order["producten"]):
+        canvas.drawString(1 * inch, height - 5.6 * inch, )
+        canvas.drawString(2 * inch, height - 5.6 * inch, )
+        canvas.drawString(5 * inch, height - 5.6 * inch, )
+        canvas.drawString(5.6 * inch, height - 5.6 * inch, )
 
     # totaal
     canvas.line(0.5 * inch, height - 5.7 * inch, 7.5 * inch, height - 5.7 * inch)
