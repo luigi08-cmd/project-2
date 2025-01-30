@@ -17,15 +17,9 @@ def create_pdf(json_file):
     with open('2000-096.json') as file:
         data =json.load(file)
 
-    order = data['order']
-
-    print(order)
-
+    order = data["order"]
     klant = order["klant"]
-
-
-
-
+    
     # default sizes
     width, height = A4
 
@@ -60,9 +54,9 @@ def create_pdf(json_file):
     poscode_klant = klant["postcode"]
     vestegings_plaats_klant = klant["stad"]
     kvk_nummer = klant["KVK-nummer"]
-    factuur_nummer = "test"
-    order_datum = "test"
-    betaal_termijn = "test"
+    factuur_nummer = order["ordernummer"]
+    order_datum = order["orderdatum"]
+    betaal_termijn = order["betaaltermijn"]
 
     canvas.drawString(1 * inch, height - 3 * inch, bedrijfsnaam)
     canvas.drawString(1 * inch, height - 3.2 * inch, address_klant)
@@ -82,11 +76,11 @@ def create_pdf(json_file):
     canvas.line(0.5 * inch, height - 5.3 * inch, 7.5 * inch, height - 5.3 * inch)
 
     # product gegevens 
-    for i in len(order["producten"]):
-        canvas.drawString(1 * inch, height - 5.6 * inch, )
-        canvas.drawString(2 * inch, height - 5.6 * inch, )
-        canvas.drawString(5 * inch, height - 5.6 * inch, )
-        canvas.drawString(5.6 * inch, height - 5.6 * inch, )
+    # for i in (order["producten"]):
+    #     canvas.drawString(1 * inch, height - 5.6 * inch, )
+    #     canvas.drawString(2 * inch, height - 5.6 * inch, )
+    #     canvas.drawString(5 * inch, height - 5.6 * inch, )
+    #     canvas.drawString(5.6 * inch, height - 5.6 * inch, )
 
     # totaal
     canvas.line(0.5 * inch, height - 5.7 * inch, 7.5 * inch, height - 5.7 * inch)
