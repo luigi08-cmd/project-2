@@ -23,8 +23,7 @@ def create_pdf(json_file):
 
     klant = order["klant"]
 
-
-
+    totale_prijs_incl_btw = 0
 
     # default sizes
     width, height = A4
@@ -82,17 +81,19 @@ def create_pdf(json_file):
     canvas.line(0.5 * inch, height - 5.3 * inch, 7.5 * inch, height - 5.3 * inch)
 
     # product gegevens 
-    for i in len(order["producten"]):
-        canvas.drawString(1 * inch, height - 5.6 * inch, )
-        canvas.drawString(2 * inch, height - 5.6 * inch, )
-        canvas.drawString(5 * inch, height - 5.6 * inch, )
-        canvas.drawString(5.6 * inch, height - 5.6 * inch, )
+    for product in order["producten"]:
+        canvas.drawString(1 * inch, height - 5.6 * inch, str(product["aantal"]))
+        canvas.drawString(2 * inch, height - 5.6 * inch, product["productnaam"])
+        btw = 1 + product["btw_percentage"] / 100
+        product_prijs = product["prijs_per_stuk_excl_btw"] * product["aantal"] * btw
+        canvas.drawString(4.7 * inch, height - 5.6 * inch, f"€ {str(product["prijs_per_stuk_excl_btw"])}")
+        canvas.drawString(5.6 * inch, height - 5.6 * inch, f"€ str(product_prijs)")
+        totale_prijs_incl_btw += product_prijs
 
     # totaal
     canvas.line(0.5 * inch, height - 5.7 * inch, 7.5 * inch, height - 5.7 * inch)
-    canvas.drawString(4 * inch, height - 5.9 * inch, "totaal")
-    canvas.drawString(5 * inch, height - 5.9 * inch, "€ 0,00")
-    canvas.drawString(5.6 * inch, height - 5.9 * inch, "€ 0,00")
+    canvas.drawString(5 * inch, height - 5.9 * inch, "totaal")
+    canvas.drawString(5.6 * inch, height - 5.9 * inch, f"€ {str(totale_prijs_incl_btw)}")
 
     canvas.save()
 create_pdf("test")
