@@ -97,4 +97,3 @@ def create_pdf(json_file, pdf_folder_location):
 
 
     canvas.save()
-create_pdf("2000-096")

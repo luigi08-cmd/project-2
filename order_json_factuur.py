@@ -56,5 +56,3 @@ def create_factuur_json(json_file_location):
     }
     with open(json_file_location + "-factuur.json", mode="w", encoding="utf-8") as write_file:
         json.dump(json_structure, write_file)
-
-create_factuur_json("2000-096")
