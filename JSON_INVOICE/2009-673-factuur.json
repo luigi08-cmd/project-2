@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2009-673", "factuur-datum": "2023-10-07", "uiterlijke-betaal-datum": "2023-11-06", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 468", "postcode": "1137 AC", "plaats": "Utrecht"}, "producten": [{"product-naam": "Adobe Photoshop", "aantal": 4, "prijs-per-stuk": 75.01, "totale-prijs-excl": 300.04, "totale-prijs-incl": 318.04}]}}

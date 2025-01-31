@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2001-951", "factuur-datum": "2023-07-02", "uiterlijke-betaal-datum": "2023-09-30", "klant": {"naam": "PC Saturnus B.V.", "address": "Schoolstraat 339", "postcode": "9143 AC", "plaats": "Rotterdam"}, "producten": [{"product-naam": "Adobe Photoshop", "aantal": 2, "prijs-per-stuk": 399.58, "totale-prijs-excl": 799.16, "totale-prijs-incl": 871.08}]}}

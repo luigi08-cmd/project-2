@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2021-081", "factuur-datum": "2020-02-22", "uiterlijke-betaal-datum": "2020-03-23", "klant": {"naam": "PC Sputnik B.V.", "address": "Kerkstraat 341", "postcode": "1782 AC", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle Cloud", "aantal": 2, "prijs-per-stuk": 135.94, "totale-prijs-excl": 271.88, "totale-prijs-incl": 288.19}]}}

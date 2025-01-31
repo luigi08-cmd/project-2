@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2024-050", "factuur-datum": "2021-04-20", "uiterlijke-betaal-datum": "2021-05-20", "klant": {"naam": "PC Saturnus B.V.", "address": "Schoolstraat 44", "postcode": "9497 AB", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Microsoft Windows 10", "aantal": 2, "prijs-per-stuk": 353.6, "totale-prijs-excl": 707.2, "totale-prijs-incl": 770.85}]}}

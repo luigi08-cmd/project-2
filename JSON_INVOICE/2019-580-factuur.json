@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2019-580", "factuur-datum": "2021-07-14", "uiterlijke-betaal-datum": "2021-08-13", "klant": {"naam": "PC Sputnik B.V.", "address": "Schoolstraat 865", "postcode": "6622 AB", "plaats": "Utrecht"}, "producten": [{"product-naam": "Oracle VM", "aantal": 2, "prijs-per-stuk": 52.71, "totale-prijs-excl": 105.42, "totale-prijs-incl": 111.75}]}}

@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2019-881", "factuur-datum": "2020-05-12", "uiterlijke-betaal-datum": "2020-08-10", "klant": {"naam": "PC Sputnik B.V.", "address": "Schoolstraat 416", "postcode": "1878 AC", "plaats": "Amsterdam"}, "producten": [{"product-naam": "GitHub", "aantal": 1, "prijs-per-stuk": 109.26, "totale-prijs-excl": 109.26, "totale-prijs-incl": 119.09}]}}

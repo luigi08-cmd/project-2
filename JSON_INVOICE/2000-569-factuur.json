@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2000-569", "factuur-datum": "2021-04-21", "uiterlijke-betaal-datum": "2021-06-20", "klant": {"naam": "PC Jupiter B.V.", "address": "Hoofdstraat 978", "postcode": "6334 AB", "plaats": "Utrecht"}, "producten": [{"product-naam": "Oracle WebLogic Server", "aantal": 3, "prijs-per-stuk": 94.0, "totale-prijs-excl": 282.0, "totale-prijs-incl": 307.38}]}}

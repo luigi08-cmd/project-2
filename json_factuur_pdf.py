@@ -5,10 +5,10 @@ import os
 import json
 from order_json_factuur import *
 
-def create_pdf(json_file, pdf_folder_location):
+def create_pdf(json_file, pdf_folder_location, pdf_name):
 
     # create json
-    with open(json_file + '-factuur.json') as file:
+    with open(json_file + ".json") as file:
         data =json.load(file)
 
     order = data["factuur"]
@@ -35,7 +35,7 @@ def create_pdf(json_file, pdf_folder_location):
     width, height = A4
 
     # create file location with correct pdf name
-    pdf_name = json_file + ".pdf"
+    pdf_name = pdf_name + ".pdf"
     file_location = os.path.join(pdf_folder_location , pdf_name) 
     canvas = Canvas(file_location)
     logo_location = os.path.join(os.path.dirname(__file__), "logo.png")

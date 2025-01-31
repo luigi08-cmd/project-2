@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2019-729", "factuur-datum": "2020-01-18", "uiterlijke-betaal-datum": "2020-04-17", "klant": {"naam": "PC Saturnus B.V.", "address": "Kerkstraat 958", "postcode": "5279 AC", "plaats": "Utrecht"}, "producten": [{"product-naam": "Microsoft Dynamics 365", "aantal": 4, "prijs-per-stuk": 84.14, "totale-prijs-excl": 336.56, "totale-prijs-incl": 356.75}]}}

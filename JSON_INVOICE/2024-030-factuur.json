@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2024-030", "factuur-datum": "2021-11-18", "uiterlijke-betaal-datum": "2021-12-18", "klant": {"naam": "PC Sputnik B.V.", "address": "Hoofdstraat 491", "postcode": "5131 AA", "plaats": "Utrecht"}, "producten": [{"product-naam": "Microsoft Office 365", "aantal": 5, "prijs-per-stuk": 132.55, "totale-prijs-excl": 662.75, "totale-prijs-incl": 702.51}]}}

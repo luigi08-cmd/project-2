@@ -1,8 +1,8 @@
 import json
 import datetime
 
-def create_factuur_json(json_file_location):
-    with open(json_file_location + '.json') as file:
+def create_factuur_json(json_file_location_order, json_file_location_proccesed):
+    with open(json_file_location_order + '.json') as file:
         data =json.load(file)
 
     order = data["order"]
@@ -28,7 +28,7 @@ def create_factuur_json(json_file_location):
         btw_percentage = product["btw_percentage"]
         btw = 1 + btw_percentage / 100
         prijs_per_stuk_excl_btw = product["prijs_per_stuk_excl_btw"]
-        product_prijs = prijs_per_stuk_excl_btw * aantal_producten
+        product_prijs = round(prijs_per_stuk_excl_btw * aantal_producten, 2)
         totale_prijs = product_prijs * btw
         totale_prijs = round(totale_prijs, 2)
         product_dict = {
@@ -54,5 +54,5 @@ def create_factuur_json(json_file_location):
             "producten": producten_list
         }
     }
-    with open(json_file_location + "-factuur.json", mode="w", encoding="utf-8") as write_file:
+    with open(json_file_location_proccesed + "-factuur.json", mode="w", encoding="utf-8") as write_file:
         json.dump(json_structure, write_file)

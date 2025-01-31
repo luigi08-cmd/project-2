@@ -5,19 +5,30 @@ from order_json_factuur import *
 
 # makes the main folder
 pdf_folder_location = os.path.join(os.path.dirname(__file__),"PDF_INVOICE")
-if os.path.exists(pdf_folder_location):
-    shutil.rmtree(pdf_folder_location)
-os.makedirs(pdf_folder_location)
+if not os.path.exists(pdf_folder_location):
+    os.makedirs(pdf_folder_location)
+
 
 json_invoice_location = os.path.join(os.path.dirname(__file__), "JSON_INVOICE")
-if os.path.exists(json_invoice_location):
-    shutil.rmtree(json_invoice_location)
-os.makedirs(json_invoice_location)
+if not os.path.exists(json_invoice_location):
+    os.makedirs(json_invoice_location)
 
 json_order_location = os.path.join(os.path.dirname(__file__), "JSON_ORDER")
+if not os.path.exists(json_order_location):
+    os.makedirs(json_order_location)
 
 json_processed_location = os.path.join(os.path.dirname(__file__), "JSON_PROCESSED")
-if os.path.exists(json_processed_location):
-    shutil.rmtree(json_processed_location)
-os.makedirs(json_processed_location)
+if not os.path.exists(json_processed_location):
+    os.makedirs(json_processed_location)
 
+
+for name in os.listdir(json_order_location):
+    name, _ = os.path.splitext(name)
+    create_factuur_json(os.path.join(json_order_location, name), os.path.join(json_invoice_location, name))
+
+for name in os.listdir(json_invoice_location):
+    name, _ = os.path.splitext(name)
+    create_pdf(os.path.join(json_invoice_location, name), pdf_folder_location, name)
+
+for name in os.listdir(json_order_location):
+    (os.path.join(json_order_location, name), os.path.join(json_processed_location, name))

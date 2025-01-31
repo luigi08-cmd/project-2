@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2024-315", "factuur-datum": "2023-09-24", "uiterlijke-betaal-datum": "2023-12-23", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 37", "postcode": "7591 AA", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle Database 19c", "aantal": 2, "prijs-per-stuk": 229.81, "totale-prijs-excl": 459.62, "totale-prijs-incl": 500.99}]}}

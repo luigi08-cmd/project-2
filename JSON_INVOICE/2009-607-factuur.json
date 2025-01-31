@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2009-607", "factuur-datum": "2021-06-13", "uiterlijke-betaal-datum": "2021-09-11", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 808", "postcode": "7279 AB", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle Java SE", "aantal": 4, "prijs-per-stuk": 132.0, "totale-prijs-excl": 528.0, "totale-prijs-incl": 638.88}]}}

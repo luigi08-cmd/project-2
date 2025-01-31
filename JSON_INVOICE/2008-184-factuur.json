@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2008-184", "factuur-datum": "2022-03-09", "uiterlijke-betaal-datum": "2022-05-08", "klant": {"naam": "PC Sputnik B.V.", "address": "Hoofdstraat 523", "postcode": "5033 AB", "plaats": "Rotterdam"}, "producten": [{"product-naam": "Oracle Database 19c", "aantal": 1, "prijs-per-stuk": 437.07, "totale-prijs-excl": 437.07, "totale-prijs-incl": 476.41}]}}

@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2021-969", "factuur-datum": "2024-02-23", "uiterlijke-betaal-datum": "2024-04-23", "klant": {"naam": "PC Sputnik B.V.", "address": "Schoolstraat 248", "postcode": "5927 AC", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Google Cloud Platform", "aantal": 2, "prijs-per-stuk": 21.52, "totale-prijs-excl": 43.04, "totale-prijs-incl": 45.62}]}}

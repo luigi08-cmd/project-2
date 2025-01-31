@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2021-972", "factuur-datum": "2024-05-21", "uiterlijke-betaal-datum": "2024-07-20", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 569", "postcode": "8425 AB", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle Cloud", "aantal": 2, "prijs-per-stuk": 117.33, "totale-prijs-excl": 234.66, "totale-prijs-incl": 283.94}]}}

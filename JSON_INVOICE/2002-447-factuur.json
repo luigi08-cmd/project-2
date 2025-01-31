@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2002-447", "factuur-datum": "2022-11-25", "uiterlijke-betaal-datum": "2022-12-25", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 395", "postcode": "1613 AA", "plaats": "Utrecht"}, "producten": [{"product-naam": "Adobe InDesign", "aantal": 4, "prijs-per-stuk": 364.95, "totale-prijs-excl": 1459.8, "totale-prijs-incl": 1591.18}]}}

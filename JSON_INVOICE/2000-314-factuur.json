@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2000-314", "factuur-datum": "2024-02-16", "uiterlijke-betaal-datum": "2024-04-16", "klant": {"naam": "PC Saturnus B.V.", "address": "Hoofdstraat 956", "postcode": "3736 AB", "plaats": "Rotterdam"}, "producten": [{"product-naam": "Oracle Cloud", "aantal": 5, "prijs-per-stuk": 115.85, "totale-prijs-excl": 579.25, "totale-prijs-incl": 614.0}]}}

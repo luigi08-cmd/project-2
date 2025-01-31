@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2016-165", "factuur-datum": "2020-11-25", "uiterlijke-betaal-datum": "2021-02-23", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 352", "postcode": "6114 AC", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Adobe Illustrator", "aantal": 1, "prijs-per-stuk": 366.36, "totale-prijs-excl": 366.36, "totale-prijs-incl": 399.33}]}}

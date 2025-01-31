@@ -1,0 +1,1 @@
+{"factuur": {"factuur-nummer": "2005-074", "factuur-datum": "2021-05-25", "uiterlijke-betaal-datum": "2021-08-23", "klant": {"naam": "PC Jupiter B.V.", "address": "Schoolstraat 850", "postcode": "5325 AA", "plaats": "Rotterdam"}, "producten": [{"product-naam": "Google Analytics", "aantal": 3, "prijs-per-stuk": 346.34, "totale-prijs-excl": 1039.02, "totale-prijs-incl": 1132.53}]}}
