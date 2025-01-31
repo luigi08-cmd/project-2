@@ -85,13 +85,13 @@ def create_pdf(json_file, pdf_folder_location, pdf_name):
         
         canvas.drawString(4.7 * inch, height - (5 + 0.2 * index) * inch, f"€ {str(product["prijs-per-stuk"])}")
         canvas.drawString(5.6 * inch, height - (5 + 0.2 * index) * inch, f"€ {str(product["totale-prijs-excl"])}")
-        totale_prijs_excl_btw += product["totale-prijs-excl"]
+        totale_prijs_excl_btw += product["totale-prijs-incl"]
         stop = index + 1
         if stop == len(order["producten"]):
             # totaal
             canvas.line(0.5 * inch, height - (5.1 + 0.2 * index) * inch, 7.5 * inch, height - (5.1 + 0.2 * index) * inch)    
             canvas.drawString(5 * inch, height - (5.3 + 0.2 * index)* inch, "totaal")
-            canvas.drawString(5.6 * inch, height - (5.3 + 0.2 * index) * inch, f"€ {str(totale_prijs_excl_btw)}")
+            canvas.drawString(5.6 * inch, height - (5.3 + 0.2 * index) * inch, f"€ {str(round(totale_prijs_excl_btw, 2))}")
 
 
 
