@@ -5,7 +5,7 @@ import os
 import json
 from order_json_factuur import *
 
-def create_pdf(json_file):
+def create_pdf(json_file, pdf_folder_location):
 
     # create json
     with open(json_file + '-factuur.json') as file:

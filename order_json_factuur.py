@@ -1,8 +1,8 @@
 import json
 import datetime
 
-def create_factuur_json(json_file_name):
-    with open(json_file_name + '.json') as file:
+def create_factuur_json(json_file_location):
+    with open(json_file_location + '.json') as file:
         data =json.load(file)
 
     order = data["order"]
@@ -54,7 +54,7 @@ def create_factuur_json(json_file_name):
             "producten": producten_list
         }
     }
-    with open(json_file_name + "-factuur.json", mode="w", encoding="utf-8") as write_file:
+    with open(json_file_location + "-factuur.json", mode="w", encoding="utf-8") as write_file:
         json.dump(json_structure, write_file)
 
 create_factuur_json("2000-096")
