@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2021-889", "factuur-datum": "2021-10-12", "uiterlijke-betaal-datum": "2021-11-11", "klant": {"naam": "PC Sputnik B.V.", "address": "Hoofdstraat 851", "postcode": "1061 AC", "plaats": "Rotterdam"}, "producten": [{"product-naam": "Microsoft Azure", "aantal": 5, "prijs-per-stuk": 162.5, "totale-prijs-excl": 812.5, "totale-prijs-incl": 885.63}]}}

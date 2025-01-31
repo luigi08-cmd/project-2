@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2000-494", "factuur-datum": "2021-04-23", "uiterlijke-betaal-datum": "2021-05-23", "klant": {"naam": "PC Sputnik B.V.", "address": "Hoofdstraat 731", "postcode": "7264 AB", "plaats": "Utrecht"}, "producten": [{"product-naam": "Oracle MySQL", "aantal": 2, "prijs-per-stuk": 433.08, "totale-prijs-excl": 866.16, "totale-prijs-incl": 1048.05}]}}

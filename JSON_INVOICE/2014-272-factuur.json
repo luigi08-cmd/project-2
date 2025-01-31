@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2014-272", "factuur-datum": "2022-04-11", "uiterlijke-betaal-datum": "2022-07-10", "klant": {"naam": "PC Saturnus B.V.", "address": "Schoolstraat 161", "postcode": "5274 AC", "plaats": "Utrecht"}, "producten": [{"product-naam": "Oracle Database 19c", "aantal": 3, "prijs-per-stuk": 94.77, "totale-prijs-excl": 284.31, "totale-prijs-incl": 344.02}]}}

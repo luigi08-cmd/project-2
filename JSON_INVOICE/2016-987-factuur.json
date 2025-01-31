@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2016-987", "factuur-datum": "2022-06-27", "uiterlijke-betaal-datum": "2022-09-25", "klant": {"naam": "PC Sputnik B.V.", "address": "Schoolstraat 261", "postcode": "1985 AB", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle Java SE", "aantal": 2, "prijs-per-stuk": 27.68, "totale-prijs-excl": 55.36, "totale-prijs-incl": 60.34}]}}

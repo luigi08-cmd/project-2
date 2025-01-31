@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2001-416", "factuur-datum": "2020-11-23", "uiterlijke-betaal-datum": "2021-02-21", "klant": {"naam": "PC Saturnus B.V.", "address": "Hoofdstraat 430", "postcode": "3231 AB", "plaats": "Utrecht"}, "producten": [{"product-naam": "Oracle VirtualBox", "aantal": 4, "prijs-per-stuk": 67.51, "totale-prijs-excl": 270.04, "totale-prijs-incl": 294.34}]}}

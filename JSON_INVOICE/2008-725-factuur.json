@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2008-725", "factuur-datum": "2024-04-21", "uiterlijke-betaal-datum": "2024-07-20", "klant": {"naam": "PC Sputnik B.V.", "address": "Kerkstraat 111", "postcode": "1783 AC", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle WebLogic Server", "aantal": 5, "prijs-per-stuk": 99.42, "totale-prijs-excl": 497.1, "totale-prijs-incl": 541.84}]}}

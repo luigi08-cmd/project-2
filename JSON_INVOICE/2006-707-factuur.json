@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2006-707", "factuur-datum": "2021-04-24", "uiterlijke-betaal-datum": "2021-06-23", "klant": {"naam": "PC Jupiter B.V.", "address": "Hoofdstraat 127", "postcode": "7730 AC", "plaats": "Utrecht"}, "producten": [{"product-naam": "Microsoft Azure", "aantal": 3, "prijs-per-stuk": 466.19, "totale-prijs-excl": 1398.57, "totale-prijs-incl": 1692.27}]}}

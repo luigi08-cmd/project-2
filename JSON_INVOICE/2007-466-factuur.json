@@ -1,1 +1,0 @@
-{"factuur": {"factuur-nummer": "2007-466", "factuur-datum": "2022-09-26", "uiterlijke-betaal-datum": "2022-12-25", "klant": {"naam": "PC Jupiter B.V.", "address": "Hoofdstraat 85", "postcode": "1066 AA", "plaats": "Amsterdam"}, "producten": [{"product-naam": "Oracle VirtualBox", "aantal": 1, "prijs-per-stuk": 47.81, "totale-prijs-excl": 47.81, "totale-prijs-incl": 52.11}]}}
